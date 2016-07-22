@@ -1,0 +1,972 @@
+%!PS-Adobe-3.0
+%%Title: kNN/kNN-example.c
+%%For: fm9ab
+%%Creator: VIM - Vi IMproved 7.4 (2013 Aug 10)
+%%CreationDate: Fri May 13 17:20:49 2016
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 59 49 564 800
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: A4
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim74/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim74/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+595 842 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(kNN/kNN-example.c                                                             Page 1)59.5 792.4 ms
+F0 sf
+0.753 0 0 r
+(//)59.5 772.4 ms
+(// Created by Marcus Rosti on 5/10/16.)59.5 762.4 ms
+(//)59.5 752.4 ms
+0.753 0 0.753 r
+(#include )59.5 732.4 ms
+0 0 0.753 r
+("kNN-example.h")s
+0.753 0 0.753 r
+(#include )59.5 722.4 ms
+0 0 0.753 r
+("stdio.h")s
+0.753 0 0.753 r
+(#include )59.5 712.4 ms
+0 0 0.753 r
+("stdlib.h")s
+0.753 0 0.753 r
+(#include )59.5 702.4 ms
+0 0 0.753 r
+(<mpi.h>)s
+0.753 0 0.753 r
+(#include )59.5 692.4 ms
+0 0 0.753 r
+(<time.h>)s
+0 0.502 0 r
+(int)59.5 672.4 ms
+0 g
+( main\()s
+0 0.502 0 r
+(int)s
+0 g
+( argc, )s
+0 0.502 0 r
+(char)s
+0 g
+( ** argv\) {)s
+(    MPI_Init\(&argc,&argv\);)59.5 662.4 ms
+(    )59.5 642.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( rank;)s
+(    MPI_Comm_rank\(MPI_COMM_WORLD,&rank\);)59.5 632.4 ms
+(    )59.5 612.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( \(argc < )s
+0 0 0.753 r
+(4)s
+0 g
+(\) {)s
+(        printf\()59.5 602.4 ms
+0 0 0.753 r
+("Takes three arguments)s
+0.753 0 0.753 r
+(\\n)s
+0 0 0.753 r
+(")s
+0 g
+(\);)s
+(        printf\()59.5 592.4 ms
+0 0 0.753 r
+(")s
+0.753 0 0.753 r
+(\\t)s
+0 0 0.753 r
+(kNN-exmaple {n-dim} {m-dim} {seed})s
+0.753 0 0.753 r
+(\\n)s
+0 0 0.753 r
+(")s
+0 g
+(\);)s
+(        exit\()59.5 582.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(\);)s
+(    })59.5 572.4 ms
+(    )59.5 562.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n = atoi\(argv[)s
+0 0 0.753 r
+(1)s
+0 g
+(]\);)s
+(    )59.5 552.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m = atoi\(argv[)s
+0 0 0.753 r
+(2)s
+0 g
+(]\);)s
+(    )59.5 542.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( seed = atoi\(argv[)s
+0 0 0.753 r
+(3)s
+0 g
+(]\);)s
+(    )59.5 532.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( k = )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(    )59.5 522.4 ms
+0 0.502 0 r
+(if)s
+0 g
+(\(argc>)s
+0 0 0.753 r
+(4)s
+0 g
+(\) k = atoi\(argv[)s
+0 0 0.753 r
+(4)s
+0 g
+(]\);)s
+(    srand\(\()59.5 492.4 ms
+0 0.502 0 r
+(unsigned)s
+0 g
+(\) seed\);)s
+(    point_cloud **pc =  allocate_raster\(n, m\);)59.5 472.4 ms
+(    initialize_raster\(n, m, pc\);)59.5 462.4 ms
+(    )59.5 442.4 ms
+0.753 0 0 r
+(//compute)s
+0 g
+(    )59.5 432.4 ms
+0 0.502 0 r
+(clock_t)s
+0 g
+( start = clock\(\), diff;)s
+(    compute_knn\(n,m,pc,k\);)59.5 422.4 ms
+(    diff = clock\(\) - start;)59.5 412.4 ms
+(    )59.5 402.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( msec = \()s
+0 0.502 0 r
+(int)s
+0 g
+(\) diff * )s
+0 0 0.753 r
+(1000)s
+0 g
+( / )s
+0 0 0.753 r
+(CLOCKS_PER_SEC)s
+0 g
+(;)s
+(    )59.5 392.4 ms
+0 0.502 0 r
+(if)s
+0 g
+(\(rank==)s
+0 0 0.753 r
+(0)s
+0 g
+(\) printf\()s
+0 0 0.753 r
+("Time taken )s
+0.753 0 0.753 r
+(%d)s
+0 0 0.753 r
+( seconds )s
+0.753 0 0.753 r
+(%d)s
+0 0 0.753 r
+( milliseconds)s
+0.753 0 0.753 r
+(\\n)s
+0 0 0.753 r
+(")s
+0 g
+(, msec/)s
+0 0 0.753 r
+(1000)s
+0 g
+(, msec%)s
+0 0 0.753 r
+(10)s
+(00)59.5 382.4 ms
+0 g
+(\);)s
+(    )59.5 372.4 ms
+0.753 0 0 r
+(//compare)s
+(//    for\(int i = 0; i < n; i++\) {)59.5 362.4 ms
+(//        printf\("%5i,0 %2.5f\\n",i,\(double\) pc[i][0].z\);)59.5 352.4 ms
+(//    })59.5 342.4 ms
+0 g
+(    free\(pc[)59.5 322.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(]\);)s
+(    free\(pc\);)59.5 312.4 ms
+(    MPI_Finalize\(\);)59.5 292.4 ms
+(    )59.5 282.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(})59.5 272.4 ms
+0 0.502 0 r
+(void)59.5 252.4 ms
+0 g
+( initialize_raster\()s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m, point_cloud *)s
+0 0.502 0 r
+(const)s
+0 g
+( *pc\) {)s
+(    )59.5 242.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i, j;)s
+(    )59.5 232.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\) {)s
+(        )59.5 222.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\( j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j ++\) {)s
+(            pc[i][j].z = rand\(\);)59.5 212.4 ms
+(            )59.5 202.4 ms
+0.753 0 0 r
+(/*pc[i][j].r = rand\(\);)s
+(            pc[i][j].g = rand\(\);)59.5 192.4 ms
+(            pc[i][j].b = rand\(\);)59.5 182.4 ms
+(            pc[i][j].a = rand\(\);*/)59.5 172.4 ms
+0 g
+(        })59.5 152.4 ms
+(    })59.5 142.4 ms
+(})59.5 132.4 ms
+0 0.502 0 r
+(float)59.5 112.4 ms
+0 g
+( **allocate_float_array\()s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m\) {)s
+(    )59.5 102.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( *data = \()s
+0 0.502 0 r
+(float)s
+0 g
+( *\)malloc\(\()s
+0 0.502 0 r
+(unsigned)s
+0 g
+( )s
+0 0.502 0 r
+(long)s
+0 g
+(\) n*m*)s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\);)s
+(    )59.5 92.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( **array= \()s
+0 0.502 0 r
+(float)s
+0 g
+( **\)malloc\(\()s
+0 0.502 0 r
+(unsigned)s
+0 g
+( )s
+0 0.502 0 r
+(long)s
+0 g
+(\) n*)s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(float)s
+0 g
+(*\)\);)s
+(    )59.5 82.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \()s
+0 0.502 0 r
+(int)s
+0 g
+( i=)s
+0 0 0.753 r
+(0)s
+0 g
+(; i<n; i++\))s
+(        array[i] = &\(data[m*i]\);)59.5 72.4 ms
+(    )59.5 52.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( array;)s
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(kNN/kNN-example.c                                                             Page 2)59.5 792.4 ms
+F0 sf
+(})59.5 772.4 ms
+(point_cloud **allocate_raster\()59.5 752.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m\) {)s
+(    point_cloud *data = \(point_cloud *\)malloc\(\()59.5 742.4 ms
+0 0.502 0 r
+(unsigned)s
+0 g
+( )s
+0 0.502 0 r
+(long)s
+0 g
+(\) n*m*)s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\(point_cloud)s
+(\)\);)59.5 732.4 ms
+(    point_cloud **array= \(point_cloud **\)malloc\(\()59.5 722.4 ms
+0 0.502 0 r
+(unsigned)s
+0 g
+( )s
+0 0.502 0 r
+(long)s
+0 g
+(\) n*)s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\(point_cloud)s
+(*\)\);)59.5 712.4 ms
+(    )59.5 702.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \()s
+0 0.502 0 r
+(int)s
+0 g
+( i=)s
+0 0 0.753 r
+(0)s
+0 g
+(; i<n; i++\))s
+(        array[i] = &\(data[m*i]\);)59.5 692.4 ms
+(    )59.5 672.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( array;)s
+(})59.5 662.4 ms
+0.753 0 0 r
+(/**)59.5 642.4 ms
+( *      m)59.5 632.4 ms
+( *   ******)59.5 622.4 ms
+( *   *    *)59.5 612.4 ms
+( *   *    *)59.5 602.4 ms
+( * n *    *)59.5 592.4 ms
+( *   *    *)59.5 582.4 ms
+( *   *    *)59.5 572.4 ms
+( *   ******)59.5 562.4 ms
+( */)59.5 552.4 ms
+0 0.502 0 r
+(void)59.5 542.4 ms
+0 g
+( compute_knn\()s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m, point_cloud *)s
+0 0.502 0 r
+(const)s
+0 g
+( *pc, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( k\) {)s
+(    )59.5 532.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( rank;)s
+(    )59.5 522.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( nprocs;)s
+(    MPI_Comm_rank\(MPI_COMM_WORLD,&rank\);)59.5 512.4 ms
+(    MPI_Comm_size\(MPI_COMM_WORLD,&nprocs\);)59.5 502.4 ms
+(    )59.5 482.4 ms
+0 0.502 0 r
+(if)s
+0 g
+(\(n % nprocs != )s
+0 0 0.753 r
+(0)s
+0 g
+(\) { printf\()s
+0 0 0.753 r
+("Invalid config")s
+0 g
+(\); exit\()s
+0 0 0.753 r
+(0)s
+0 g
+(\); })s
+(    )59.5 462.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( num_rows = n/nprocs;)s
+(    )59.5 452.4 ms
+0.753 0 0 r
+(//printf\("Num Rows: %i\\n",num_rows\);)s
+0 g
+(    )59.5 432.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( ** smoothed_pc = allocate_float_array\(num_rows,m\);)s
+(    )59.5 412.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < num_rows; i++\) {)s
+(        )59.5 402.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\) {)s
+(            )59.5 382.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( val = )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(            )59.5 372.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( num_cells = )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(            )59.5 362.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( a = -k; a <= k; a++\) {)s
+(                )59.5 352.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( b = -k; b <= k; b++\) {)s
+(                    )59.5 342.4 ms
+0 0.502 0 r
+(if)s
+0 g
+(\(rank*num_rows+i+a >= )s
+0 0 0.753 r
+(0)s
+0 g
+( && rank*num_rows+i+a < n && j+b >= )s
+0 0 0.753 r
+(0)s
+0 g
+( &)s
+(& j+b < m\) {)59.5 332.4 ms
+(                        val += pc[rank * num_rows + i + a][j + b].z;)59.5 322.4 ms
+(                        num_cells++;)59.5 312.4 ms
+(                    })59.5 302.4 ms
+(                })59.5 292.4 ms
+(            })59.5 282.4 ms
+(            )59.5 272.4 ms
+0.753 0 0 r
+(//printf\("%i,%i:   %10.10f %10.10f %i\\n",i,j,\(val/num_cells\),pc[rank*num)s
+(_rows+i][j].z,num_cells\);)59.5 262.4 ms
+0 g
+(            smoothed_pc[i][j] = val/num_cells;)59.5 252.4 ms
+(            )59.5 242.4 ms
+0.753 0 0 r
+(//if\(rank == 1\) printf\("%i,%i:   %10.10f %10.10f %i\\n",i,j,smoothed_pc[i)s
+(][j],pc[rank*num_rows+i][j].z,num_cells\);)59.5 232.4 ms
+0 g
+(        })59.5 222.4 ms
+(    })59.5 212.4 ms
+(    )59.5 192.4 ms
+0 0.502 0 r
+(if)s
+0 g
+(\(rank != )s
+0 0 0.753 r
+(0)s
+0 g
+(\) MPI_Send\(&\(smoothed_pc[)s
+0 0 0.753 r
+(0)s
+0 g
+(][)s
+0 0 0.753 r
+(0)s
+0 g
+(]\),num_rows * m,MPI_FLOAT,)s
+0 0 0.753 r
+(0)s
+0 g
+(,)s
+0 0 0.753 r
+(0)s
+0 g
+(,MPI_COMM_)s
+(WORLD\);)59.5 182.4 ms
+(    )59.5 162.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( \(rank == )s
+0 0 0.753 r
+(0)s
+0 g
+( \) {)s
+(        )59.5 142.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( sender = )s
+0 0 0.753 r
+(0)s
+0 g
+(; sender < nprocs; sender++\) {)s
+(            )59.5 132.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i <num_rows; i++\) {)s
+(                )59.5 122.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\) {)s
+(                    pc[sender*num_rows + i][j].z = smoothed_pc[i][j];)59.5 112.4 ms
+(                })59.5 102.4 ms
+(            })59.5 92.4 ms
+(        })59.5 82.4 ms
+(        )59.5 72.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( ** rec_buff = allocate_float_array\(num_rows,m\);)s
+(        )59.5 62.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( sender = )s
+0 0 0.753 r
+(1)s
+0 g
+(; sender < nprocs; sender++\) {)s
+(            MPI_Status stat;)59.5 52.4 ms
+re sp
+%%PageTrailer
+%%Page: 3 3
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(kNN/kNN-example.c                                                             Page 3)59.5 792.4 ms
+F0 sf
+(            )59.5 772.4 ms
+0.753 0 0 r
+(//printf\("Trying to rec\\n"\);)s
+0 g
+(            MPI_Recv\(&\(rec_buff[)59.5 762.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(][)s
+0 0 0.753 r
+(0)s
+0 g
+(]\),num_rows*m,MPI_FLOAT,sender,)s
+0 0 0.753 r
+(0)s
+0 g
+(,MPI_COMM_WORLD,)s
+(&stat\);)59.5 752.4 ms
+(            )59.5 742.4 ms
+0.753 0 0 r
+(//printf\("Received\\n"\);)s
+0 g
+(            )59.5 732.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i <num_rows; i++\) {)s
+(                )59.5 722.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+( j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\) {)s
+(                    pc[sender*num_rows + i][j].z = rec_buff[i][j];)59.5 712.4 ms
+(                })59.5 702.4 ms
+(            })59.5 692.4 ms
+(        })59.5 682.4 ms
+(        free\(rec_buff[)59.5 672.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(]\);)s
+(        free\(rec_buff\);)59.5 662.4 ms
+(    })59.5 652.4 ms
+(    free\(smoothed_pc[)59.5 642.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(]\);)s
+(    free\(smoothed_pc\);)59.5 632.4 ms
+(})59.5 612.4 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 3
+%%EOF
+

@@ -1,0 +1,41 @@
+Each sample counts as 0.01 seconds.
+  %   cumulative   self              self     total
+ time   seconds   seconds    calls  ms/call  ms/call  name
+ 55.86      0.24     0.24  1000000     0.00     0.00  calc_cov_mat
+ 13.96      0.30     0.06        9     6.67     6.67  generate_integral_image
+  9.31      0.34     0.04     2000     0.02     0.02  dt1D
+  9.31      0.38     0.04                             main
+  4.65      0.40     0.02        1    20.02    60.05  dt2D
+  2.33      0.41     0.01        1    10.01    70.05  dtBin
+  2.33      0.42     0.01        1    10.01    10.01  initialize_pc
+  2.33      0.43     0.01        1    10.01    10.01  smothing_windows_map
+  0.00      0.43     0.00  1000000     0.00     0.00  compute_evec
+  0.00      0.43     0.00        3     0.00     0.00  allocate_float_array
+  0.00      0.43     0.00        1     0.00     0.00  allocate_pc
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.

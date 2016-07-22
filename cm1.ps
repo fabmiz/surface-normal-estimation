@@ -1,0 +1,3159 @@
+%!PS-Adobe-3.0
+%%Title: CM/CM.c
+%%For: fm9ab
+%%Creator: VIM - Vi IMproved 7.4 (2013 Aug 10)
+%%CreationDate: Fri May 13 17:21:12 2016
+%%DocumentData: Clean8Bit
+%%Orientation: Portrait
+%%Pages: (atend)
+%%PageOrder: Ascend
+%%BoundingBox: 59 49 564 800
+%%DocumentMedia: A4 595 842 0 () ()
+%%DocumentNeededResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%DocumentSuppliedResources: procset VIM-Prolog 1.4 1
+%%+ encoding VIM-latin1 1.0 0
+%%Requirements: duplex collate color
+%%EndComments
+%%BeginDefaults
+%%PageResources: font Courier
+%%+ font Courier-Bold
+%%+ font Courier-Oblique
+%%+ font Courier-BoldOblique
+%%PageMedia: A4
+%%EndDefaults
+%%BeginProlog
+%%BeginResource: procset VIM-Prolog
+%%BeginDocument: /usr/share/vim/vim74/print/prolog.ps
+%!PS-Adobe-3.0 Resource-ProcSet
+%%Title: VIM-Prolog
+%%Version: 1.4 1
+%%EndComments
+% Editing of this file is NOT RECOMMENDED.  You run a very good risk of causing
+% all PostScript printing from VIM failing if you do.  PostScript is not called
+% a write-only language for nothing!
+/packedarray where not{userdict begin/setpacking/pop load def/currentpacking
+false def end}{pop}ifelse/CP currentpacking def true setpacking
+/bd{bind def}bind def/ld{load def}bd/ed{exch def}bd/d/def ld
+/db{dict begin}bd/cde{currentdict end}bd
+/T true d/F false d
+/SO null d/sv{/SO save d}bd/re{SO restore}bd
+/L2 systemdict/languagelevel 2 copy known{get exec}{pop pop 1}ifelse 2 ge d
+/m/moveto ld/s/show ld /ms{m s}bd /g/setgray ld/r/setrgbcolor ld/sp{showpage}bd
+/gs/gsave ld/gr/grestore ld/cp/currentpoint ld
+/ul{gs UW setlinewidth cp UO add 2 copy newpath m 3 1 roll add exch lineto
+stroke gr}bd
+/bg{gs r cp BO add 4 -2 roll rectfill gr}bd
+/sl{90 rotate 0 exch translate}bd
+L2{
+/sspd{mark exch{setpagedevice}stopped cleartomark}bd
+/nc{1 db/NumCopies ed cde sspd}bd
+/sps{3 db/Orientation ed[3 1 roll]/PageSize ed/ImagingBBox null d cde sspd}bd
+/dt{2 db/Tumble ed/Duplex ed cde sspd}bd
+/c{1 db/Collate ed cde sspd}bd
+}{
+/nc{/#copies ed}bd
+/sps{statusdict/setpage get exec}bd
+/dt{statusdict/settumble 2 copy known{get exec}{pop pop pop}ifelse
+statusdict/setduplexmode 2 copy known{get exec}{pop pop pop}ifelse}bd
+/c{pop}bd
+}ifelse
+/ffs{findfont exch scalefont d}bd/sf{setfont}bd
+/ref{1 db findfont dup maxlength dict/NFD ed{exch dup/FID ne{exch NFD 3 1 roll
+put}{pop pop}ifelse}forall/Encoding findresource dup length 256 eq{NFD/Encoding
+3 -1 roll put}{pop}ifelse NFD dup/FontType get 3 ne{/CharStrings}{/CharProcs}
+ifelse 2 copy known{2 copy get dup maxlength dict copy[/questiondown/space]{2
+copy known{2 copy get 2 index/.notdef 3 -1 roll put pop exit}if pop}forall put
+}{pop pop}ifelse dup NFD/FontName 3 -1 roll put NFD definefont pop end}bd
+CP setpacking
+(\004)cvn{}bd
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%BeginResource: encoding VIM-latin1
+%%BeginDocument: /usr/share/vim/vim74/print/latin1.ps
+%!PS-Adobe-3.0 Resource-Encoding
+%%Title: VIM-latin1
+%%Version: 1.0 0
+%%EndComments
+/VIM-latin1[
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclam /quotedbl /numbersign /dollar /percent /ampersand /quotesingle
+/parenleft /parenright /asterisk /plus /comma /minus /period /slash
+/zero /one /two /three /four /five /six /seven
+/eight /nine /colon /semicolon /less /equal /greater /question
+/at /A /B /C /D /E /F /G
+/H /I /J /K /L /M /N /O
+/P /Q /R /S /T /U /V /W
+/X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+/grave /a /b /c /d /e /f /g
+/h /i /j /k /l /m /n /o
+/p /q /r /s /t /u /v /w
+/x /y /z /braceleft /bar /braceright /asciitilde /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/space /exclamdown /cent /sterling /currency /yen /brokenbar /section
+/dieresis /copyright /ordfeminine /guillemotleft /logicalnot /hyphen /registered /macron
+/degree /plusminus /twosuperior /threesuperior /acute /mu /paragraph /periodcentered
+/cedilla /onesuperior /ordmasculine /guillemotright /onequarter /onehalf /threequarters /questiondown
+/Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+/Egrave /Eacute /Ecircumflex /Edieresis /Igrave /Iacute /Icircumflex /Idieresis
+/Eth /Ntilde /Ograve /Oacute /Ocircumflex /Otilde /Odieresis /multiply
+/Oslash /Ugrave /Uacute /Ucircumflex /Udieresis /Yacute /Thorn /germandbls
+/agrave /aacute /acircumflex /atilde /adieresis /aring /ae /ccedilla
+/egrave /eacute /ecircumflex /edieresis /igrave /iacute /icircumflex /idieresis
+/eth /ntilde /ograve /oacute /ocircumflex /otilde /odieresis /divide
+/oslash /ugrave /uacute /ucircumflex /udieresis /yacute /thorn /ydieresis]
+/Encoding defineresource pop
+% vim:ff=unix:
+%%EOF
+%%EndDocument
+%%EndResource
+%%EndProlog
+%%BeginSetup
+595 842 0 sps
+1 nc
+T F dt
+T c
+%%IncludeResource: font Courier
+/_F0 /VIM-latin1 /Courier ref
+/F0 10 /_F0 ffs
+%%IncludeResource: font Courier-Bold
+/_F1 /VIM-latin1 /Courier-Bold ref
+/F1 10 /_F1 ffs
+%%IncludeResource: font Courier-Oblique
+/_F2 /VIM-latin1 /Courier-Oblique ref
+/F2 10 /_F2 ffs
+%%IncludeResource: font Courier-BoldOblique
+/_F3 /VIM-latin1 /Courier-BoldOblique ref
+/F3 10 /_F3 ffs
+/UO -1 d
+/UW 0.5 d
+/BO -2.5 d
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+0 g
+(CM/CM.c                                                                       Page 1)59.5 792.4 ms
+F0 sf
+0.753 0 0 r
+(//**************************)59.5 772.4 ms
+(// Created by Fabrice Mizero)59.5 762.4 ms
+(// CS6444 Spring 2016, Final Project.)59.5 752.4 ms
+(// Based on this paper: Adaptive Neighborhood Selection for Real-Time Surface Normal)59.5 742.4 ms
+(// Estimation from Organized Point Cloud Data Using Integral Images)59.5 732.4 ms
+(//)59.5 722.4 ms
+(//**************************)59.5 712.4 ms
+0.753 0 0.753 r
+(#include )59.5 692.4 ms
+0 0 0.753 r
+("CM.h")s
+0.753 0 0.753 r
+(#include )59.5 682.4 ms
+0 0 0.753 r
+(<stdio.h>)s
+0.753 0 0.753 r
+(#include )59.5 672.4 ms
+0 0 0.753 r
+(<math.h>)s
+0.753 0 0.753 r
+(#include )59.5 662.4 ms
+0 0 0.753 r
+(<string.h>)s
+0.753 0 0.753 r
+(#include )59.5 652.4 ms
+0 0 0.753 r
+(<time.h>)s
+0.753 0 0.753 r
+(#include )59.5 642.4 ms
+0 0 0.753 r
+(<stdlib.h>)s
+0.753 0 0.753 r
+(#include )59.5 632.4 ms
+0 0 0.753 r
+(<gsl/gsl_math.h>)s
+0.753 0 0.753 r
+(#include )59.5 622.4 ms
+0 0 0.753 r
+(<gsl/gsl_eigen.h>)s
+0.753 0 0.753 r
+(#define INF )59.5 612.4 ms
+0 0 0.753 r
+(1E20)s
+0 0.502 0 r
+(int)59.5 582.4 ms
+0 g
+( main\()s
+0 0.502 0 r
+(int)s
+0 g
+( argc, )s
+0 0.502 0 r
+(char)s
+0 g
+( **argv\){)s
+(    )59.5 552.4 ms
+0 0.502 0 r
+(if)s
+0 g
+(\(argc < )s
+0 0 0.753 r
+(2)s
+0 g
+(\) die\()s
+0 0 0.753 r
+("Usage: ./cov_mat <width><height>[seed][beta][smothing_scale_fa)s
+(ctor]")59.5 542.4 ms
+0 g
+(\);)s
+(    )59.5 522.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m = atoi\(argv[)s
+0 0 0.753 r
+(1)s
+0 g
+(]\);)s
+(    )59.5 512.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n = atoi\(argv[)s
+0 0 0.753 r
+(2)s
+0 g
+(]\);)s
+(    )59.5 502.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( seed = \(argc > )s
+0 0 0.753 r
+(3)s
+0 g
+(\)?atoi\(argv[)s
+0 0 0.753 r
+(3)s
+0 g
+(]\):)s
+0 0 0.753 r
+(40)s
+0 g
+(;)s
+(    )59.5 492.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( beta = \(argc > )s
+0 0 0.753 r
+(4)s
+0 g
+(\)?atoi\(argv[)s
+0 0 0.753 r
+(4)s
+0 g
+(]\):)s
+0 0 0.753 r
+(2)s
+0 g
+(;)s
+(    )59.5 482.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( scale_factor = \(argc > )s
+0 0 0.753 r
+(5)s
+0 g
+(\)?atoi\(argv[)s
+0 0 0.753 r
+(5)s
+0 g
+(]\):)s
+0 0 0.753 r
+(3)s
+0 g
+(;)s
+(    srand\(seed\);)59.5 462.4 ms
+(    point_rgbd **pc = allocate_pc\(m, n\);)59.5 452.4 ms
+(    initialize_pc\(m, n, pc\);)59.5 442.4 ms
+(    )59.5 432.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i,j,k;)s
+(    )59.5 422.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( **intImgs[)s
+0 0 0.753 r
+(9)s
+0 g
+(];)s
+(    )59.5 412.4 ms
+0.753 0 0 r
+(//Compute all integral images)s
+0 g
+(    )59.5 402.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(k=)s
+0 0 0.753 r
+(0)s
+0 g
+(; k<)s
+0 0 0.753 r
+(9)s
+0 g
+(;k++\) intImgs[k] = generate_integral_image\(pc,m,n,k\);)s
+(    )59.5 382.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( **dci_map = allocate_float_array\(m,n\);)s
+(    )59.5 372.4 ms
+0.753 0 0 r
+(//Compute the depth change indication map)s
+0 g
+(    point_rgbd p,p1,p2;)59.5 362.4 ms
+(    )59.5 352.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < m; i++\){)s
+(       )59.5 342.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < n; j++\){)s
+(            dci_map[i][j] = \(\(i+)59.5 332.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=m\)||\(j+)s
+0 0 0.753 r
+(1)s
+0 g
+(>=n\)\) ? )s
+0 0 0.753 r
+(0)s
+0 g
+( : dc_smoothing_area\(pc[i][j],pc)s
+([i+)59.5 322.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(][j],pc[i][j+)s
+0 0 0.753 r
+(1)s
+0 g
+(],scale_factor\);)s
+(       })59.5 312.4 ms
+(     })59.5 302.4 ms
+(    )59.5 282.4 ms
+0.753 0 0 r
+(//Compute distance transform map from the depth change indication map)s
+0 g
+(    )59.5 272.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( **dt_map = allocate_float_array\(m,n\);)s
+(    dt_map = dtBin\(dci_map, m, n\);)59.5 262.4 ms
+(   )59.5 242.4 ms
+0.753 0 0 r
+(//Compute per-pixel smothing area/window)s
+0 g
+(    )59.5 232.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( **smothing_windows = allocate_float_array\(m,n\);)s
+(    smothing_windows = smothing_windows_map\(pc, m, n,dt_map, beta\);)59.5 222.4 ms
+(    )59.5 202.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < m; i++\){)s
+(       )59.5 192.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < n; j++\){)s
+(            calc_cov_mat\(i,j,intImgs,smothing_windows\);)59.5 182.4 ms
+(       })59.5 172.4 ms
+(    })59.5 162.4 ms
+(    free\(dci_map\);)59.5 142.4 ms
+(    free\(dt_map\);)59.5 132.4 ms
+(    free\(smothing_windows\);)59.5 122.4 ms
+(    free\(pc\);)59.5 112.4 ms
+(    )59.5 92.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(})59.5 82.4 ms
+0 0.502 0 r
+(void)59.5 62.4 ms
+0 g
+( compute_evec\()s
+0 0.502 0 r
+(float)s
+0 g
+( cov_mat[)s
+0 0 0.753 r
+(3)s
+0 g
+(][)s
+0 0 0.753 r
+(3)s
+0 g
+(]\){)s
+(    gsl_matrix_view m = gsl_matrix_view_array \(\()59.5 52.4 ms
+0 0.502 0 r
+(double)s
+0 g
+( *\)cov_mat, )s
+0 0 0.753 r
+(3)s
+0 g
+(, )s
+0 0 0.753 r
+(3)s
+0 g
+(\);)s
+re sp
+%%PageTrailer
+%%Page: 2 2
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(CM/CM.c                                                                       Page 2)59.5 792.4 ms
+F0 sf
+(    gsl_vector *eval = gsl_vector_alloc \()59.5 772.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(\);)s
+(    gsl_matrix *evec = gsl_matrix_alloc \()59.5 762.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(,)s
+0 0 0.753 r
+(3)s
+0 g
+(\);)s
+(    gsl_eigen_symmv_workspace * w =  gsl_eigen_symmv_alloc \()59.5 752.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(\);)s
+(    gsl_eigen_symmv \(&m.matrix, eval, evec, w\);)59.5 742.4 ms
+(    gsl_eigen_symmv_free \(w\);)59.5 732.4 ms
+(    gsl_eigen_symmv_sort\(eval, evec, GSL_EIGEN_SORT_ABS_ASC\);)59.5 722.4 ms
+(    gsl_vector_view evec_i = gsl_matrix_column \(evec, )59.5 712.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(\);)s
+(    gsl_vector_fprintf \()59.5 702.4 ms
+0 0 0.753 r
+(stdout)s
+0 g
+(, &evec_i.vector, )s
+0 0 0.753 r
+(")s
+0.753 0 0.753 r
+(%g)s
+0 0 0.753 r
+(")s
+0 g
+(\);)s
+(    gsl_vector_free \(eval\);)59.5 692.4 ms
+(    gsl_matrix_free \(evec\);)59.5 682.4 ms
+(})59.5 672.4 ms
+0 0.502 0 r
+(void)59.5 652.4 ms
+0 g
+( calc_cov_mat\()s
+0 0.502 0 r
+(int)s
+0 g
+( m,)s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(float)s
+0 g
+( ***intImgs, )s
+0 0.502 0 r
+(float)s
+0 g
+(** smoothing_windows\){)s
+(    )59.5 642.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( win[)s
+0 0 0.753 r
+(9)s
+0 g
+(];)s
+(    )59.5 632.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( cov[)s
+0 0 0.753 r
+(3)s
+0 g
+(][)s
+0 0 0.753 r
+(3)s
+0 g
+(];)s
+(    )59.5 622.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i,j;)s
+(    )59.5 612.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i=)s
+0 0 0.753 r
+(0)s
+0 g
+(; i < )s
+0 0 0.753 r
+(9)s
+0 g
+(;i++\) win[i] = window_average\(intImgs[i],m,n,smoothing_windows[m][)s
+(n]\);)59.5 602.4 ms
+(    )59.5 582.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( X[)s
+0 0 0.753 r
+(3)s
+0 g
+(]    = {win[)s
+0 0 0.753 r
+(0)s
+0 g
+(],win[)s
+0 0 0.753 r
+(1)s
+0 g
+(],win[)s
+0 0 0.753 r
+(2)s
+0 g
+(]};)s
+(    )59.5 572.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( Y[)s
+0 0 0.753 r
+(3)s
+0 g
+(]    = {win[)s
+0 0 0.753 r
+(0)s
+0 g
+(],win[)s
+0 0 0.753 r
+(1)s
+0 g
+(],win[)s
+0 0 0.753 r
+(2)s
+0 g
+(]};)s
+(    )59.5 562.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( A[)s
+0 0 0.753 r
+(3)s
+0 g
+(][)s
+0 0 0.753 r
+(3)s
+0 g
+(] = {)s
+(        {win[)59.5 552.4 ms
+0 0 0.753 r
+(3)s
+0 g
+(],win[)s
+0 0 0.753 r
+(6)s
+0 g
+(],win[)s
+0 0 0.753 r
+(7)s
+0 g
+(]},)s
+(        {win[)59.5 542.4 ms
+0 0 0.753 r
+(6)s
+0 g
+(],win[)s
+0 0 0.753 r
+(4)s
+0 g
+(],win[)s
+0 0 0.753 r
+(8)s
+0 g
+(]},)s
+(        {win[)59.5 532.4 ms
+0 0 0.753 r
+(7)s
+0 g
+(],win[)s
+0 0 0.753 r
+(8)s
+0 g
+(],win[)s
+0 0 0.753 r
+(5)s
+0 g
+(]})s
+(    };)59.5 522.4 ms
+(    )59.5 512.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( XY[)s
+0 0 0.753 r
+(3)s
+0 g
+(][)s
+0 0 0.753 r
+(3)s
+0 g
+(] = {)s
+(        {X[)59.5 502.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(0)s
+0 g
+(], X[)s
+0 0 0.753 r
+(0)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(1)s
+0 g
+(], X[)s
+0 0 0.753 r
+(0)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(2)s
+0 g
+(]},)s
+(        {X[)59.5 492.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(0)s
+0 g
+(], X[)s
+0 0 0.753 r
+(1)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(1)s
+0 g
+(], X[)s
+0 0 0.753 r
+(1)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(2)s
+0 g
+(]},)s
+(        {X[)59.5 482.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(0)s
+0 g
+(], X[)s
+0 0 0.753 r
+(2)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(1)s
+0 g
+(], X[)s
+0 0 0.753 r
+(2)s
+0 g
+(]*Y[)s
+0 0 0.753 r
+(2)s
+0 g
+(]})s
+(    };)59.5 472.4 ms
+(    )59.5 462.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i=)s
+0 0 0.753 r
+(0)s
+0 g
+(; i<)s
+0 0 0.753 r
+(3)s
+0 g
+(; i++\) )s
+0 0.502 0 r
+(for)s
+0 g
+(\(j=)s
+0 0 0.753 r
+(0)s
+0 g
+(; j<)s
+0 0 0.753 r
+(3)s
+0 g
+(; j++\) cov[i][j] = A[i][j] - XY[i][j];)s
+(    compute_evec\(cov\);)59.5 452.4 ms
+(    printf\()59.5 442.4 ms
+0 0 0.753 r
+(")s
+0.753 0 0.753 r
+(\\n\\n)s
+0 0 0.753 r
+(")s
+0 g
+(\);)s
+(})59.5 432.4 ms
+0 0.502 0 r
+(float)59.5 412.4 ms
+0 g
+( window_average\()s
+0 0.502 0 r
+(float)s
+0 g
+( ** intImg,)s
+0 0.502 0 r
+(int)s
+0 g
+( m,)s
+0 0.502 0 r
+(int)s
+0 g
+( n,)s
+0 0.502 0 r
+(float)s
+0 g
+( r\){ )s
+0.753 0 0 r
+(// S\(Io,m,n,r\))s
+0 g
+(    )59.5 402.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( inv = )s
+0 0 0.753 r
+(1.0)s
+0 g
+( / \()s
+0 0 0.753 r
+(4.0)s
+0 g
+( * r * r\);)s
+(    )59.5 392.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( region = area\(intImg,m+r,n+r\) - area\(intImg,m-r,n+r\) - area\(intImg,m+r,n-r)s
+(\) + area\(intImg,m-r,n-r\);)59.5 382.4 ms
+(    )59.5 372.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( inv * region;)s
+(})59.5 362.4 ms
+0 0.502 0 r
+(float)59.5 342.4 ms
+0 g
+( area\()s
+0 0.502 0 r
+(float)s
+0 g
+( ** intImg,)s
+0 0.502 0 r
+(int)s
+0 g
+( x,)s
+0 0.502 0 r
+(int)s
+0 g
+( y\){)s
+(    )59.5 332.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( \(\(x-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(y-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? intImg[x][y] + intImg[x-)s
+0 0 0.753 r
+(1)s
+0 g
+(][y-)s
+0 0 0.753 r
+(1)s
+0 g
+(] - \(intImg[x-)s
+0 0 0.753 r
+(1)s
+0 g
+(][y] )s
+(+ intImg[x][y-)59.5 322.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(]\): intImg[x][y];)s
+(})59.5 312.4 ms
+0 0.502 0 r
+(float)59.5 292.4 ms
+0 g
+( **smothing_windows_map\(point_rgbd *)s
+0 0.502 0 r
+(const)s
+0 g
+( *pc,)s
+0 0.502 0 r
+(int)s
+0 g
+( m, )s
+0 0.502 0 r
+(int)s
+0 g
+( n,)s
+0 0.502 0 r
+(float)s
+0 g
+( ** dt_map, )s
+0 0.502 0 r
+(int)s
+0 g
+( beta\){)59.5 282.4 ms
+(    )59.5 272.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( ** windows = allocate_float_array\(m,n\);)s
+(    )59.5 262.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i,j;)s
+(    )59.5 252.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( a = )s
+0 0 0.753 r
+(1.0)s
+0 g
+( / sqrt\()s
+0 0 0.753 r
+(2.0)s
+0 g
+(\);)s
+(    )59.5 242.4 ms
+0 0.502 0 r
+(double)s
+0 g
+( x,y;)s
+(    )59.5 232.4 ms
+0 0.502 0 r
+(double)s
+0 g
+( eps = )s
+0 0 0.753 r
+(0.00001)s
+0 g
+(;)s
+(    )59.5 222.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < m; i++\){)s
+(       )59.5 212.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < n; j++\){)s
+(        x = \()59.5 202.4 ms
+0 0.502 0 r
+(double)s
+0 g
+(\)  dd_smoothing_area\(pc[i][j],beta\);)s
+(        y = \()59.5 192.4 ms
+0 0.502 0 r
+(double)s
+0 g
+(\)  dt_map[i][j] * a;)s
+(        windows[i][j] = \(gsl_fcmp\(x,y,eps\)\) ? x : y;)59.5 182.4 ms
+(       })59.5 172.4 ms
+(    })59.5 162.4 ms
+(    )59.5 152.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( windows;)s
+(})59.5 142.4 ms
+0 0.502 0 r
+(float)59.5 122.4 ms
+0 g
+( *dt1D\()s
+0 0.502 0 r
+(float)s
+0 g
+( *f, )s
+0 0.502 0 r
+(int)s
+0 g
+( n\) {)s
+(  )59.5 112.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( *d = \()s
+0 0.502 0 r
+(float)s
+0 g
+( *\) malloc\(n * )s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\);)s
+(  )59.5 102.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( *v = \()s
+0 0.502 0 r
+(int)s
+0 g
+( *\) malloc\(n * )s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(int)s
+0 g
+(\)\);)s
+(  )59.5 92.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( *z = \()s
+0 0.502 0 r
+(float)s
+0 g
+( *\) malloc\(\(n+)s
+0 0 0.753 r
+(1)s
+0 g
+(\) * )s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\);)s
+(  )59.5 82.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( k = )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(  v[)59.5 72.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(] = )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(  z[)59.5 62.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(] = -INF;)s
+(  z[)59.5 52.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(] = +INF;)s
+re sp
+%%PageTrailer
+%%Page: 3 3
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(CM/CM.c                                                                       Page 3)59.5 792.4 ms
+F0 sf
+(  )59.5 772.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( q;)s
+(  )59.5 762.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(q = )s
+0 0 0.753 r
+(1)s
+0 g
+(; q <= n-)s
+0 0 0.753 r
+(1)s
+0 g
+(; q++\) {)s
+(    )59.5 752.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( s  = \(\(f[q]+\(q*q\)\)-\(f[v[k]]+ \(v[k]*v[k]\)\)\)/\()s
+0 0 0.753 r
+(2)s
+0 g
+(*q-)s
+0 0 0.753 r
+(2)s
+0 g
+(*v[k]\);)s
+(    )59.5 742.4 ms
+0 0.502 0 r
+(while)s
+0 g
+( \(s <= z[k]\) {)s
+(      k--;)59.5 732.4 ms
+(      s  = \(\(f[q]+\(q*q\)\)-\(f[v[k]]+\(v[k]*v[k]\)\)\)/\()59.5 722.4 ms
+0 0 0.753 r
+(2)s
+0 g
+(*q-)s
+0 0 0.753 r
+(2)s
+0 g
+(*v[k]\);)s
+(    })59.5 712.4 ms
+(    k++;)59.5 702.4 ms
+(    v[k] = q;)59.5 692.4 ms
+(    z[k] = s;)59.5 682.4 ms
+(    z[k+)59.5 672.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(] = +INF;)s
+(  })59.5 662.4 ms
+(  k = )59.5 642.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(  )59.5 632.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(q = )s
+0 0 0.753 r
+(0)s
+0 g
+(; q <= n-)s
+0 0 0.753 r
+(1)s
+0 g
+(; q++\) {)s
+(    )59.5 622.4 ms
+0 0.502 0 r
+(while)s
+0 g
+( \(z[k+)s
+0 0 0.753 r
+(1)s
+0 g
+(] < q\))s
+(      k++;)59.5 612.4 ms
+(    d[q] = \(q-v[k]\)*\(q-v[k]\) + f[v[k]];)59.5 602.4 ms
+(  })59.5 592.4 ms
+(  free\(v\);)59.5 582.4 ms
+(  free\(z\);)59.5 572.4 ms
+(  )59.5 562.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( d;)s
+(})59.5 552.4 ms
+0 0.502 0 r
+(int)59.5 532.4 ms
+0 g
+( max\()s
+0 0.502 0 r
+(int)s
+0 g
+( m, )s
+0 0.502 0 r
+(int)s
+0 g
+( n\){)s
+(    )59.5 522.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( \(m > n\)?m:n;)s
+(})59.5 512.4 ms
+0.753 0 0 r
+(/* dt of 2d function using squared distance */)59.5 502.4 ms
+0 0.502 0 r
+(void)59.5 492.4 ms
+0 g
+( dt2D\()s
+0 0.502 0 r
+(float)s
+0 g
+( **dci, )s
+0 0.502 0 r
+(int)s
+0 g
+( m, )s
+0 0.502 0 r
+(int)s
+0 g
+( n\) {)s
+(   )59.5 482.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( x,y;)s
+(  )59.5 472.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( *f = \()s
+0 0.502 0 r
+(float)s
+0 g
+( *\) malloc\(max\(m,n\) * )s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\);)s
+(  )59.5 462.4 ms
+0.753 0 0 r
+(// transform along columns)s
+0 g
+(  )59.5 452.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(x = )s
+0 0 0.753 r
+(0)s
+0 g
+(; x < m; x++\) {)s
+(    )59.5 442.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(y = )s
+0 0 0.753 r
+(0)s
+0 g
+(; y < n; y++\) {)s
+(      f[y] = dci[y][x];)59.5 432.4 ms
+(    })59.5 422.4 ms
+(    )59.5 412.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( *d = dt1D\(f,n\);)s
+(    )59.5 402.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(y = )s
+0 0 0.753 r
+(0)s
+0 g
+(; y < n; y++\) {)s
+(      dci[y][x] = d[y];)59.5 392.4 ms
+(    })59.5 382.4 ms
+(    free\(d\);)59.5 372.4 ms
+(  })59.5 362.4 ms
+(  )59.5 342.4 ms
+0.753 0 0 r
+(// transform along rows)s
+0 g
+(  )59.5 332.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(y = )s
+0 0 0.753 r
+(0)s
+0 g
+(; y < n; y++\) {)s
+(    )59.5 322.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(x = )s
+0 0 0.753 r
+(0)s
+0 g
+(; x < m; x++\) {)s
+(      f[x] = dci[y][x];)59.5 312.4 ms
+(    })59.5 302.4 ms
+(    )59.5 292.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( *d = dt1D\(f, m\);)s
+(    )59.5 282.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(x = )s
+0 0 0.753 r
+(0)s
+0 g
+(; x < m; x++\) {)s
+(      dci[y][x] = d[x];)59.5 272.4 ms
+(    })59.5 262.4 ms
+(    free\(d\);)59.5 252.4 ms
+(  })59.5 242.4 ms
+(  free\(f\);)59.5 232.4 ms
+(})59.5 222.4 ms
+0 0.502 0 r
+(float)59.5 202.4 ms
+0 g
+( **dtBin\()s
+0 0.502 0 r
+(float)s
+0 g
+( **dci, )s
+0 0.502 0 r
+(int)s
+0 g
+( m, )s
+0 0.502 0 r
+(int)s
+0 g
+( n\) {)s
+(    )59.5 192.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( x,y;)s
+(  )59.5 182.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( **out = allocate_float_array\(m,n\);)s
+(  )59.5 172.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(y = )s
+0 0 0.753 r
+(0)s
+0 g
+(; y < n; y++\) {)s
+(    )59.5 162.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(x = )s
+0 0 0.753 r
+(0)s
+0 g
+(; x < m; x++\) {)s
+(      )59.5 152.4 ms
+0 0.502 0 r
+(if)s
+0 g
+( \(dci[y][x] == )s
+0 0 0.753 r
+(1)s
+0 g
+(\))s
+(    out[y][x] = )59.5 142.4 ms
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(      )59.5 132.4 ms
+0 0.502 0 r
+(else)s
+0 g
+(    out[y][x] = INF;)59.5 122.4 ms
+(    })59.5 112.4 ms
+(  })59.5 102.4 ms
+(  dt2D\(out,m,n\);)59.5 92.4 ms
+(  )59.5 82.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( out;)s
+(})59.5 72.4 ms
+0 0.502 0 r
+(float)59.5 52.4 ms
+0 g
+( depth\(point_rgbd point\){)s
+re sp
+%%PageTrailer
+%%Page: 4 4
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(CM/CM.c                                                                       Page 4)59.5 792.4 ms
+F0 sf
+(     )59.5 772.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( \(point.x*point.x\) + \(point.y*point.y\) + \(point.z*point.z\);)s
+(})59.5 762.4 ms
+0 0.502 0 r
+(float)59.5 752.4 ms
+0 g
+( dd_smoothing_area\(point_rgbd point, )s
+0 0.502 0 r
+(float)s
+0 g
+( beta\){)s
+(    )59.5 742.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( f_dc = alpha * depth\(point\);)s
+(    )59.5 732.4 ms
+0 0.502 0 r
+(return)s
+0 g
+(  beta * f_dc;)s
+(})59.5 722.4 ms
+0 0.502 0 r
+(float)59.5 702.4 ms
+0 g
+( dc_smoothing_area\(point_rgbd p, point_rgbd p1, point_rgbd p2,)s
+0 0.502 0 r
+(float)s
+0 g
+( scale_facto)s
+(r\){)59.5 692.4 ms
+(    )59.5 682.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( thresh = scale_factor * alpha * depth\(p\);)s
+(    )59.5 662.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( depth_change_y = depth\(p1\) - depth\(p\);)s
+(    )59.5 652.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( depth_change_x = depth\(p2\) - depth\(p\);)s
+(    )59.5 642.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( \(\(depth_change_x>=thresh\)||\(depth_change_y>=thresh\)\)?)s
+0 0 0.753 r
+(1.0)s
+0 g
+(:)s
+0 0 0.753 r
+(0.0)s
+0 g
+(;)s
+(})59.5 632.4 ms
+0 0.502 0 r
+(float)59.5 612.4 ms
+0 g
+( **generate_integral_image \(point_rgbd *)s
+0 0.502 0 r
+(const)s
+0 g
+( *pc, )s
+0 0.502 0 r
+(int)s
+0 g
+( m, )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(int)s
+0 g
+( code\){)s
+(    )59.5 602.4 ms
+0.753 0 0 r
+(/*code  feature)s
+(     * 0     x)59.5 592.4 ms
+(     * 1     y)59.5 582.4 ms
+(     * 2     z)59.5 572.4 ms
+(     * 3     xx)59.5 562.4 ms
+(     * 4     yy)59.5 552.4 ms
+(     * 5     zz)59.5 542.4 ms
+(     * 6     xy)59.5 532.4 ms
+(     * 7     xz)59.5 522.4 ms
+(     * 8     yz)59.5 512.4 ms
+(    */)59.5 502.4 ms
+0 g
+(    )59.5 482.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( ** sat = allocate_float_array\(m,n\);)s
+(    )59.5 472.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( a=)s
+0 0 0.753 r
+(0.0)s
+0 g
+(, b=)s
+0 0 0.753 r
+(0.0)s
+0 g
+(, c=)s
+0 0 0.753 r
+(0.0)s
+0 g
+(, d=)s
+0 0 0.753 r
+(0.0)s
+0 g
+(;)s
+(    )59.5 462.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i,j;)s
+(    )59.5 442.4 ms
+0.753 0 0 r
+(// matrix traversal loop for calculating the SAT)s
+0 0.502 0 r
+(switch)59.5 432.4 ms
+0 g
+(\(code\){)s
+(    )59.5 422.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(0)s
+0 g
+(:)s
+(        )59.5 412.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 402.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 392.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 382.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 372.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 362.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 352.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 342.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].x : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      sat[i][j] = d + a + b - c;)59.5 332.4 ms
+(              })59.5 322.4 ms
+(        })59.5 312.4 ms
+(    )59.5 302.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 292.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(1)s
+0 g
+(:)s
+(        )59.5 282.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 272.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 262.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 252.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 242.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 232.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 222.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 212.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].y : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      sat[i][j] = d + a + b - c;)59.5 202.4 ms
+(              })59.5 192.4 ms
+(        })59.5 182.4 ms
+(    )59.5 172.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 162.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(2)s
+0 g
+(:)s
+(        )59.5 152.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 142.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 132.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 122.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 112.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 102.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 92.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 82.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].z : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      sat[i][j] = d + a + b - c;)59.5 72.4 ms
+(              })59.5 62.4 ms
+(        })59.5 52.4 ms
+re sp
+%%PageTrailer
+%%Page: 5 5
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(CM/CM.c                                                                       Page 5)59.5 792.4 ms
+F0 sf
+(    )59.5 772.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 752.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(3)s
+0 g
+(:)s
+(        )59.5 742.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 732.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 722.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 712.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 702.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 692.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 682.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 672.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].x * pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].x: )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      sat[i][j] = d + a + b - c;)59.5 662.4 ms
+(              })59.5 652.4 ms
+(        })59.5 642.4 ms
+(    )59.5 632.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 612.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(4)s
+0 g
+(:)s
+(        )59.5 602.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 592.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 582.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 572.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 562.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 552.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 542.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 532.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].y * pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].y : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)59.5 522.4 ms
+(                      sat[i][j] = d + a + b - c;)59.5 512.4 ms
+(              })59.5 502.4 ms
+(        })59.5 492.4 ms
+(    )59.5 482.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 472.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(5)s
+0 g
+(:)s
+(        )59.5 462.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 452.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 442.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 432.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 422.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 412.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 402.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 392.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].z * pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].z : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)59.5 382.4 ms
+(                      sat[i][j] = d + a + b - c;)59.5 372.4 ms
+(              })59.5 362.4 ms
+(        })59.5 352.4 ms
+(    )59.5 342.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 332.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(6)s
+0 g
+(:)s
+(        )59.5 322.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 312.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 302.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 292.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 282.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 272.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 262.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 252.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].x * pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].y : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)59.5 242.4 ms
+(                      sat[i][j] = d + a + b - c;)59.5 232.4 ms
+(              })59.5 222.4 ms
+(        })59.5 212.4 ms
+(    )59.5 202.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 192.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(7)s
+0 g
+(:)s
+(        )59.5 182.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 172.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 162.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 152.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 142.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 132.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 122.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 112.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].x * pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].z : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)59.5 102.4 ms
+(                      sat[i][j] = d + a + b - c;)59.5 92.4 ms
+(              })59.5 82.4 ms
+(        })59.5 72.4 ms
+(    )59.5 62.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 52.4 ms
+0 0.502 0 r
+(case)s
+0 g
+( )s
+0 0 0.753 r
+(8)s
+0 g
+(:)s
+re sp
+%%PageTrailer
+%%Page: 6 6
+%%BeginPageSetup
+sv
+0 g
+F0 sf
+%%EndPageSetup
+F1 sf
+(CM/CM.c                                                                       Page 6)59.5 792.4 ms
+F0 sf
+(        )59.5 772.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\){)s
+(               )59.5 762.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j++\){)s
+(                     )59.5 752.4 ms
+0.753 0 0 r
+(// pick up array elements within bounds and picks "zero")s
+0 g
+(                     )59.5 742.4 ms
+0.753 0 0 r
+(// for values outside bounds.)s
+0 g
+(                      a = \(i-)59.5 732.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      b = \(j-)59.5 722.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)             ? sat[i][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]    : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      c = \(\(i-)59.5 712.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? sat[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(]  : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)s
+(                      d = \(\(i-)59.5 702.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)&&\(j-)s
+0 0 0.753 r
+(1)s
+0 g
+(>=)s
+0 0 0.753 r
+(0)s
+0 g
+(\)\) ? pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].y * pc[i-)s
+0 0 0.753 r
+(1)s
+0 g
+(][j-)s
+0 0 0.753 r
+(1)s
+0 g
+(].z : )s
+0 0 0.753 r
+(0)s
+0 g
+(;)59.5 692.4 ms
+(                      sat[i][j] = d + a + b - c;)59.5 682.4 ms
+(              })59.5 672.4 ms
+(        })59.5 662.4 ms
+(    )59.5 652.4 ms
+0 0.502 0 r
+(break)s
+0 g
+(;)s
+(    )59.5 642.4 ms
+0 0.502 0 r
+(default)s
+0 g
+(:)s
+(        printf\()59.5 632.4 ms
+0 0 0.753 r
+("Integral image gen error: Invalid code)s
+0.753 0 0.753 r
+(\\n)s
+0 0 0.753 r
+(")s
+0 g
+(\);)s
+(    })59.5 622.4 ms
+0.753 0 0 r
+(//end switch)s
+0 g
+(    )59.5 612.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( sat;)s
+(})59.5 602.4 ms
+(point_rgbd **allocate_pc\()59.5 582.4 ms
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m\) {)s
+(  )59.5 572.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i;)s
+(  point_rgbd ** pc = \(point_rgbd **\)malloc\(\()59.5 562.4 ms
+0 0.502 0 r
+(unsigned)s
+0 g
+(\) n * )s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\(point_rgbd *\)\);)s
+(  )59.5 552.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(i=)s
+0 0 0.753 r
+(0)s
+0 g
+(; i<n; i++\)  pc[i] = \(point_rgbd *\)malloc\(\()s
+0 0.502 0 r
+(unsigned)s
+0 g
+(\) m * )s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\(point_rgbd)s
+(\)\);)59.5 542.4 ms
+(  )59.5 532.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( pc;)s
+(})59.5 522.4 ms
+0 0.502 0 r
+(float)59.5 502.4 ms
+0 g
+( **allocate_float_array\()s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m\) {)s
+(    )59.5 492.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( *data = \()s
+0 0.502 0 r
+(float)s
+0 g
+( *\)malloc\(\()s
+0 0.502 0 r
+(unsigned)s
+0 g
+( )s
+0 0.502 0 r
+(long)s
+0 g
+(\) n*m*)s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\);)s
+(    )59.5 482.4 ms
+0 0.502 0 r
+(float)s
+0 g
+( **array= \()s
+0 0.502 0 r
+(float)s
+0 g
+( **\)malloc\(\()s
+0 0.502 0 r
+(unsigned)s
+0 g
+( )s
+0 0.502 0 r
+(long)s
+0 g
+(\) n*)s
+0 0.502 0 r
+(sizeof)s
+0 g
+(\()s
+0 0.502 0 r
+(float)s
+0 g
+(*\)\);)s
+(    )59.5 472.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i;)s
+(    )59.5 462.4 ms
+0 0.502 0 r
+(for)s
+0 g
+( \(i=)s
+0 0 0.753 r
+(0)s
+0 g
+(; i<n; i++\))s
+(        array[i] = &\(data[m*i]\);)59.5 452.4 ms
+(    )59.5 442.4 ms
+0 0.502 0 r
+(return)s
+0 g
+( array;)s
+(})59.5 432.4 ms
+0 0.502 0 r
+(void)59.5 412.4 ms
+0 g
+( initialize_pc\()s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( n, )s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(int)s
+0 g
+( m, point_rgbd *)s
+0 0.502 0 r
+(const)s
+0 g
+( *pc\) {)s
+(    )59.5 402.4 ms
+0 0.502 0 r
+(int)s
+0 g
+( i, j;)s
+(    )59.5 392.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\(i = )s
+0 0 0.753 r
+(0)s
+0 g
+(; i < n; i++\) {)s
+(        )59.5 382.4 ms
+0 0.502 0 r
+(for)s
+0 g
+(\( j = )s
+0 0 0.753 r
+(0)s
+0 g
+(; j < m; j ++\) {)s
+(            pc[i][j].x =\(\()59.5 372.4 ms
+0 0.502 0 r
+(float)s
+0 g
+(\)rand\(\)/\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\()s
+0 0 0.753 r
+(RAND_MAX)s
+0 g
+(\)\);)s
+(            pc[i][j].y =\(\()59.5 362.4 ms
+0 0.502 0 r
+(float)s
+0 g
+(\)rand\(\)/\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\()s
+0 0 0.753 r
+(RAND_MAX)s
+0 g
+(\)\);)s
+(            pc[i][j].z =\(\()59.5 352.4 ms
+0 0.502 0 r
+(float)s
+0 g
+(\)rand\(\)/\()s
+0 0.502 0 r
+(float)s
+0 g
+(\)\()s
+0 0 0.753 r
+(RAND_MAX)s
+0 g
+(\)\);)s
+(        })59.5 332.4 ms
+(    })59.5 322.4 ms
+(})59.5 312.4 ms
+0 0.502 0 r
+(void)59.5 292.4 ms
+0 g
+( die\()s
+0 0.502 0 r
+(const)s
+0 g
+( )s
+0 0.502 0 r
+(char)s
+0 g
+( *error\) {)s
+(    printf\()59.5 282.4 ms
+0 0 0.753 r
+(")s
+0.753 0 0.753 r
+(%s)s
+0 0 0.753 r
+(")s
+0 g
+(, error\);)s
+(    exit\()59.5 272.4 ms
+0 0 0.753 r
+(1)s
+0 g
+(\);)s
+(})59.5 262.4 ms
+re sp
+%%PageTrailer
+%%Trailer
+%%Pages: 6
+%%EOF
+
